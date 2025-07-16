@@ -2,7 +2,7 @@
 
 process m3_process {
 
-    publishDir "${params.resultsdir}", mode: 'copy', overwrite: true
+    // publishDir "${params.resultsdir}", mode: 'copy', overwrite: true
 
     input:
         path(input_file)

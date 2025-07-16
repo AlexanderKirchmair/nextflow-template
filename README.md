@@ -2,9 +2,15 @@
 
 ### env
 
+Setup
+```bash
+mkdir bin bin/bash bin/py bin/R conf envs logs modules notebooks
+touch pipeline_main.nf bin/bash/functions.sh bin/py/functions.py bin/py/__init__.py conf/main.config
+```
+
 Create conda environment
 ```bash
-conda create -n 'nftemp' numpy pandas papermill ipykernel ipywidgets
+conda create -n 'nftemp' numpy pandas papermill ipykernel ipywidgets nb-clean
 conda activate nftemp
 conda env export | grep -v "^prefix: " > 'envs/nftemp.yml'
 ```
